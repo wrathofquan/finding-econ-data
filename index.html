@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #303030; color: #cccccc; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #cccccc; background-color: #303030; }
+code > span.kw { color: #f0dfaf; } /* Keyword */
+code > span.dt { color: #dfdfbf; } /* DataType */
+code > span.dv { color: #dcdccc; } /* DecVal */
+code > span.bn { color: #dca3a3; } /* BaseN */
+code > span.fl { color: #c0bed1; } /* Float */
+code > span.ch { color: #dca3a3; } /* Char */
+code > span.st { color: #cc9393; } /* String */
+code > span.co { color: #7f9f7f; } /* Comment */
+code > span.ot { color: #efef8f; } /* Other */
+code > span.al { color: #ffcfaf; } /* Alert */
+code > span.fu { color: #efef8f; } /* Function */
+code > span.er { color: #c3bf9f; } /* Error */
+code > span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
+code > span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code > span.sc { color: #dca3a3; } /* SpecialChar */
+code > span.vs { color: #cc9393; } /* VerbatimString */
+code > span.ss { color: #cc9393; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #f0dfaf; } /* ControlFlow */
+code > span.op { color: #f0efd0; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #7f9f7f; } /* Documentation */
+code > span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code > span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+</style>
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/theme/serif.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <link href="index_files/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="finding-data-for-economics-research" class="slide level2">
+<h2>Finding Data for Economics Research</h2>
+<p>UC Berkeley Library</p>
+<p>February 2018</p>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>“An approximate answer to the right question is worth a great deal more than a precise answer to the wrong question.”</p>
+</blockquote>
+<p>-John Tukey</p>
+</section>
+<section id="before-anything-else" class="slide level2">
+<h2>Before anything else…</h2>
+</section>
+<section id="plan-your-research-with-a-literature-review" class="slide level2">
+<h2>Plan your Research with a Literature Review</h2>
+<p><a href="http://www.lib.berkeley.edu/" class="uri">http://www.lib.berkeley.edu/</a></p>
+<p><a href="http://scholar.google.com" class="uri">http://scholar.google.com</a></p>
+<p><a href="http://guides.lib.berkeley.edu/all-guides" class="uri">http://guides.lib.berkeley.edu/all-guides</a></p>
+</section>
+<section id="plan-your-research-with-a-literature-review-1" class="slide level2">
+<h2>Plan your Research with a Literature Review</h2>
+<p><img src="netflix.jpg" /></p>
+</section>
+<section id="plainly-as-best-you-can-state-your-variables" class="slide level2">
+<h2>Plainly (as best you can) state your variables</h2>
+<span class="math display">\[\begin{equation}
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots \beta_p X_p + \epsilon
+\end{equation}\]</span>
+</section>
+<section id="plainly-as-best-you-can-state-your-variables-1" class="slide level2">
+<h2>Plainly (as best you can) state your variables</h2>
+<span class="math display">\[\begin{equation}
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots \beta_p X_p + \epsilon
+\end{equation}\]</span>
+<p><br></p>
+<p>Hours_Sleep = Hours_School + Hours_Work + ¯_(ツ)_/¯</p>
+</section>
+<section id="structure-and-availability-of-data" class="slide level2">
+<h2>Structure and availability of data</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 24%" />
+<col style="width: 20%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Unit of Analysis</th>
+<th>Geography</th>
+<th>Time-Period</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aggregated or Microdata? (counties/nations/households vs. individuals)</td>
+<td>Is there a geographic component to your topic? (U.S., Sub-Saharan Africa, India)</td>
+<td>Do you want a data for a specific time period? (1980-2000, 1930-1960)</td>
+<td>How often do you want measures for your variables? (every year, every ten years, monthly, quarterly)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="providers" class="slide level2">
+<h2>Providers</h2>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 36%" />
+<col style="width: 26%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Researchers</th>
+<th>Government Agencies</th>
+<th>NGO/IGOs</th>
+<th>Research Organizations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Are there people you know who are doing this kind of research?</td>
+<td>Think about government agencies - is the request for some official statistics or data that they’d be likely to collect and publish? (Department of Energy, CDC, Census Bureau)</td>
+<td>Are there councils or interest organizations devoted to the topic that might collect data independently? (World Bank, OECD)</td>
+<td>Would any specific research organizations be interested in the topic? (Pew, Roper, Gallup, ACLU )</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-8020-rule" class="slide level2">
+<h2>The 80/20 “Rule”</h2>
+<blockquote>
+<p>It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data.</p>
+</blockquote>
+<p>-Dasu and Johnson</p>
+</section>
+<section id="tidy-data" class="slide level2">
+<h2>Tidy Data</h2>
+<blockquote>
+<p>“Happy families are all alike; every unhappy family is unhappy in its own way.”</p>
+</blockquote>
+<p>– Leo Tolstoy</p>
+<blockquote>
+<p>“Tidy datasets are all alike, but every messy dataset is messy in its own way.”</p>
+</blockquote>
+<p>– Hadley Wickham</p>
+</section>
+<section id="tidy-data-happy-data" class="slide level2">
+<h2>Tidy Data = Happy Data</h2>
+<p>Tidy Data has the following attributes:</p>
+<p>Each variable forms a column and contains values</p>
+<p>Each observation forms a row</p>
+<p><img src="tidy.png" /></p>
+</section>
+<section id="tidy-data-happy-data-1" class="slide level2">
+<h2>Tidy Data = Happy Data</h2>
+<p>[melt.png]</p>
+</section>
+<section id="variable-naming" class="slide level2">
+<h2>Variable Naming</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Good_Variable_Name</th>
+<th>Bad_Variable_Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>gnp2010</td>
+<td>gnp-2002; gnp#2002</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>real_int</td>
+<td>real interest rate</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>score1; gnp2003</td>
+<td>1st_score; 2003gnp</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>reg_out; glm1</td>
+<td>REG; glm; ttest</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>invest; interest</td>
+<td>xxx; yyy; zmdje;</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>male; asian</td>
+<td>gender; race</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>citizen</td>
+<td>Are_you_a_US_citizen?</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>income; intUS03</td>
+<td>INCOME; Int_us2003;</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2017-04-20</td>
+<td>April 20, 2017</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="variable-naming-1" class="slide level2">
+<h2>Variable Naming</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Good_Variable_Name</th>
+<th>Bad_Variable_Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>gnp2010</td>
+<td>gnp-2002; gnp#2002</td>
+<td>avoid special characters</td>
+</tr>
+<tr class="even">
+<td>real_int</td>
+<td>real interest rate</td>
+<td>Use underscore</td>
+</tr>
+<tr class="odd">
+<td>score1; gnp2003</td>
+<td>1st_score; 2003gnp</td>
+<td>Begin with a character</td>
+</tr>
+<tr class="even">
+<td>reg_out; glm1</td>
+<td>REG; glm; ttest</td>
+<td>Avoid reserved words</td>
+</tr>
+<tr class="odd">
+<td>invest; interest</td>
+<td>xxx; yyy; zmdje;</td>
+<td>Use meaningful names</td>
+</tr>
+<tr class="even">
+<td>male; asian</td>
+<td>gender; race</td>
+<td>Use a value of dummy</td>
+</tr>
+<tr class="odd">
+<td>fav_color</td>
+<td>Whats_Your_Favorite_Color?</td>
+<td>The shorter, the better</td>
+</tr>
+<tr class="even">
+<td>income; intUS03</td>
+<td>INCOME; Int_us2003;</td>
+<td>Use lower cases</td>
+</tr>
+<tr class="odd">
+<td>2017-04-20</td>
+<td>April 20, 2017</td>
+<td>Use common ISO year format</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="missing-data" class="slide level2">
+<h2>Missing Data</h2>
+<p><img src="nulls.png" /></p>
+</section>
+<section id="library-licensed-data-aggregators" class="slide level2">
+<h2>Library Licensed Data Aggregators</h2>
+<p>Data Planet</p>
+<p>Social Explorer</p>
+</section>
+<section id="data-repositories-for-replication-data" class="slide level2">
+<h2>Data Repositories for Replication Data</h2>
+<p>Dataverse</p>
+<p>ICPSR</p>
+<p>Data.gov</p>
+<p><a href="https://www.aeaweb.org/rfe/showCat.php?cat_id=9">American Economics Association</a></p>
+</section>
+<section id="apis" class="slide level2">
+<h2>APIs</h2>
+<p><a href="https://libraries.mit.edu/scholarly/publishing/apis-for-scholarly-resources/" class="uri">https://libraries.mit.edu/scholarly/publishing/apis-for-scholarly-resources/</a></p>
+</section>
+<section id="scraping" class="slide level2">
+<h2>Scraping</h2>
+<p><a href="https://en.wikipedia.org/wiki/UFO_sightings_in_the_United_States" class="uri">https://en.wikipedia.org/wiki/UFO_sightings_in_the_United_States</a></p>
+</section>
+<section id="scraping-with-python" class="slide level2">
+<h2>Scraping with Python</h2>
+<p><img src="python.png" /></p>
+</section>
+<section id="scraping-with-r" class="slide level2">
+<h2>Scraping with R</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(rvest)
+<span class="kw">library</span>(dplyr)
+ufo &lt;-<span class="st"> </span><span class="kw">read_html</span>(<span class="st">&quot;https://en.wikipedia.org/wiki/UFO_sightings_in_the_United_States&quot;</span>)
+
+ufo_date &lt;-<span class="st"> </span><span class="kw">html_nodes</span>(ufo,<span class="st">&#39;td:nth-child(1)&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>() 
+ufo_date &lt;-<span class="st"> </span>ufo_date[<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">44</span>)] <span class="co">#remove extra elements</span>
+ufo_state &lt;-<span class="st"> </span><span class="kw">html_nodes</span>(ufo,<span class="st">&#39;td:nth-child(3)&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>()
+ufo_name &lt;-<span class="st"> </span><span class="kw">html_nodes</span>(ufo,<span class="st">&#39;td:nth-child(4)&#39;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>()
+ufo_df&lt;-<span class="kw">data.frame</span>(<span class="dt">date =</span> ufo_date, <span class="dt">name =</span> ufo_name, <span class="dt">state =</span> ufo_state)
+
+<span class="kw">head</span>(ufo_df, <span class="dt">n =</span><span class="dv">5</span>)</code></pre></div>
+<pre><code>##                date                        name      state
+## 1        April 1941    Cape Girardeau UFO crash   Missouri
+## 2 February 24, 1942       Battle of Los Angeles California
+## 3     June 21, 1947       Maury Island incident Washington
+## 4     June 24, 1947 Kenneth Arnold UFO sighting Washington
+## 5      July 7, 1947                                Montana</code></pre>
+</section>
+<section id="miscellaneous-collections" class="slide level2">
+<h2>Miscellaneous Collections</h2>
+<p><a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html" class="uri">https://vincentarelbundock.github.io/Rdatasets/datasets.html</a></p>
+<p><a href="https://github.com/caesar0301/awesome-public-datasets" class="uri">https://github.com/caesar0301/awesome-public-datasets</a></p>
+</section>
+<section id="text-mining" class="slide level2">
+<h2>Text-mining</h2>
+<p><img src="textmining_flowchart.png" style="width:70.0%" /></p>
+</section>
+<section id="text-mining-1" class="slide level2">
+<h2>Text-mining</h2>
+<p><a href="http://guides.lib.berkeley.edu/text-mining" class="uri">http://guides.lib.berkeley.edu/text-mining</a></p>
+</section>
+<section id="d-lab-library-data-lab-statistics-department-student-learning-center" class="slide level2">
+<h2>D-Lab, Library Data Lab, Statistics Department, Student Learning Center</h2>
+<ul>
+<li><a href="http://dlab.berkeley.edu/" class="uri">http://dlab.berkeley.edu/</a></li>
+<li><a href="http://www.lib.berkeley.edu/libraries/data-lab" class="uri">http://www.lib.berkeley.edu/libraries/data-lab</a></li>
+<li><a href="https://statistics.berkeley.edu/consulting" class="uri">https://statistics.berkeley.edu/consulting</a></li>
+<li><a href="http://slc.berkeley.edu/econ" class="uri">http://slc.berkeley.edu/econ</a></li>
+</ul>
+</section>
+<section id="peer-advising-at-moffitt" class="slide level2">
+<h2>Peer Advising at Moffitt</h2>
+<center>
+<p><img src="flyer.png" style="width:45.0%" /></p>
+<p><a href="https://data.berkeley.edu/education/data-peers-consulting" class="uri">https://data.berkeley.edu/education/data-peers-consulting</a></p>
+</center>
+</section>
+<section id="reaching-out" class="slide level2">
+<h2>Reaching out</h2>
+<p><a href="http://www.lib.berkeley.edu/libraries/data-lab" class="uri">http://www.lib.berkeley.edu/libraries/data-lab</a></p>
+</section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        chalkboard: {
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/search/search.js', async: true },
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
