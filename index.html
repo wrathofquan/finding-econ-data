@@ -729,6 +729,220 @@ Salary = \beta_0 + \beta_1 Gender + \beta_2 Race + \ldots \beta_p X_p + \epsilon
 </tbody>
 </table>
 </section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>“”,“METAREA”,“WTSUPP”,“SEX”,“RACE”,“INCTOT”,“OCC” “1”,7365,2300.9,“Male”,651,123500,“Systems Manager” “2”,7365,2021.71,“Female”,803,60230,“Admin Assistant” “3”,7365,1574.42,“Male”,100,95610,“Programmer” “4”,7365,1754.13,“Female”,100,75000,“Admin Assistant” “5”,7365,3239.38,“Male”,100,50008,“First-line Supervisor, admin” “6”,7365,2044.9,“Female”,651,78001,“Computer Support Specialist” “7”,7365,2683.43,“Male”,802,101700,“Mechanical Engineer” “8”,7365,4246.01,“Female”,651,74101,“Systems Manager” “9”,7365,2018.73,“Male”,100,28501,“Chief Executive” “10”,7365,5693.22,“Male”,200,74718,“Admin Assistant” “11”,7365,3940.96,“Male”,100,93001,“Engineer, other” “12”,7365,2029.34,“Male”,651,150032,“Systems Manager” “13”,7365,2263.92,“Male”,651,120150,“Electrical Engineer” “14”,7365,3379.88,“Male”,100,90,“Marketing Manager” “15”,7365,2091.59,“Female”,300,72108,“Admin Assistant” “16”,7365,2018.73,“Male”,100,280002,“Chief Executive” “17”,7365,2188.57,“Male”,651,114843,“Chief Executive” “18”,7365,3250.69,“Female”,100,80050,“Admin Assistant” “19”,7365,1894.1,“Male”,651,120060,“Operations Manager”</p>
+</section>
+<section id="codebooksdata-dictionariesreadmesetc.-are-your-friend" class="slide level2">
+<h2>Codebooks/Data Dictionaries/ReadMes,etc. are your Friend</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read.csv</span>(<span class="st">&quot;cps.csv&quot;</span>)</code></pre></div>
+<pre><code>##       X METAREA  WTSUPP    SEX RACE  INCTOT                            OCC
+## 1     1    7365 2300.90   Male  651  123500                Systems Manager
+## 2     2    7365 2021.71 Female  803   60230                Admin Assistant
+## 3     3    7365 1574.42   Male  100   95610                     Programmer
+## 4     4    7365 1754.13 Female  100   75000                Admin Assistant
+## 5     5    7365 3239.38   Male  100   50008   First-line Supervisor, admin
+## 6     6    7365 2044.90 Female  651   78001    Computer Support Specialist
+## 7     7    7365 2683.43   Male  802  101700            Mechanical Engineer
+## 8     8    7365 4246.01 Female  651   74101                Systems Manager
+## 9     9    7365 2018.73   Male  100   28501                Chief Executive
+## 10   10    7365 5693.22   Male  200   74718                Admin Assistant
+## 11   11    7365 3940.96   Male  100   93001                Engineer, other
+## 12   12    7365 2029.34   Male  651  150032                Systems Manager
+## 13   13    7365 2263.92   Male  651  120150            Electrical Engineer
+## 14   14    7365 3379.88   Male  100      90              Marketing Manager
+## 15   15    7365 2091.59 Female  300   72108                Admin Assistant
+## 16   16    7365 2018.73   Male  100  280002                Chief Executive
+## 17   17    7365 2188.57   Male  651  114843                Chief Executive
+## 18   18    7365 3250.69 Female  100   80050                Admin Assistant
+## 19   19    7365 1894.10   Male  651  120060             Operations Manager
+## 20   20    7365 1975.03   Male  651   96100                     Programmer
+## 21   21    7365 2105.84   Male  651   96980         Computer Hardware Eng.
+## 22   22    7365 2105.84 Female  651   60980         Engineering Technician
+## 23   23    7365 1784.96   Male  100  148013 Information Research Scientist
+## 24   24    7365 2213.60 Female  651   45029         Engineering Technician
+## 25   25    7365 2253.25   Male  651  148032                     Programmer
+## 26   26    7365 1711.51   Male  100  158100              Marketing Manager
+## 27   27    7365 2136.95   Male  651  146043              Marketing Manager
+## 28   28    7365 1944.26   Male  300   82500    Computer Support Specialist
+## 29   29    7365 1896.16   Male  100  154000                Chief Executive
+## 30   30    7365 1673.85   Male  100   99240                Engineer, other
+## 31   31    7365 1575.74   Male  100   29000   First-line Supervisor, admin
+## 32   32    7365 2018.58   Male  100  120001             Operations Manager
+## 33   33    7365 3399.42 Female  100   82000                  Admin Manager
+## 34   34    7365 3080.52   Male  100  209502              Marketing Manager
+## 35   35    7365 2118.90   Male  100   76521              Marketing Manager
+## 36   36    7365 2118.90 Female  651   75760                 Civil Engineer
+## 37   37    7365 3205.71   Male  100  200135                Chief Executive
+## 38   38    7365 3322.10 Female  100   66000                Admin Assistant
+## 39   39    7365 3205.71 Female  100  103336    Computer Support Specialist
+## 40   40    7365 3063.34 Female  100   18000                Admin Assistant
+## 41   41    7365 1958.48   Male  100  268001                Chief Executive
+## 42   42    7365 1802.07 Female  100  149846             Operations Manager
+## 43   43    7365 4062.19 Female  100   15000                Admin Assistant
+## 44   44    7365 1795.92   Male  100  130250                 Civil Engineer
+## 45   45    7365 1709.71 Female  100  976166                Chief Executive
+## 46   46    7365 1709.71 Female  100  114406              Marketing Manager
+## 47   47    7365 1847.48   Male  100  249656   First-line Supervisor, admin
+## 48   48    7365 1680.16   Male  651   72000                           1107
+## 49   49    7365 3083.55 Female  100   75000                Chief Executive
+## 50   50    7365 1386.33   Male  100   55800   First-line Supervisor, admin
+## 51   51    7365 1600.55   Male  100  107000              Marketing Manager
+## 52   52    7365 4120.65   Male  100   73000             Operations Manager
+## 53   53    7365 1995.30   Male  651  100402              Computer Operator
+## 54   54    7365 1939.58   Male  100   80331                Chief Executive
+## 55   55    7365 1754.69 Female  100   35000                Chief Executive
+## 56   56    7365 3094.85 Female  100   34220                Admin Assistant
+## 57   57    7365 1900.04 Female  100   36033                Admin Assistant
+## 58   58    7365 1900.04   Male  100   74179              Marketing Manager
+## 59   59    7365 1889.88 Female  100   96100                Chief Executive
+## 60   60    7365 2861.14   Male  100  155202                     Programmer
+## 61   61    7365 1706.08   Male  100  351175                Chief Executive
+## 62   62    7365 2088.40 Female  651   46000                Admin Assistant
+## 63   63    7365 3342.96   Male  100  160019            Engineering Manager
+## 64   64    7365 3178.41   Male  100  141552            Electrical Engineer
+## 65   65    7365 3767.00 Female  100  133015              Marketing Manager
+## 66   66    7365 3767.00   Male  651   65363                  Admin Manager
+## 67   67    7365 2309.63   Male  100  120000              Network Architect
+## 68   68    7365 3379.88   Male  100   80000   First-line Supervisor, admin
+## 69   69    7365 3814.06   Male  100  150000                Systems Analyst
+## 70   70    7365 3850.38   Male  100  222100                Systems Manager
+## 71   71    7365 1888.48   Male  651  140014    Computer Support Specialist
+## 72   72    7365 2377.32   Male  651   75010                Admin Assistant
+## 73   73    7365 2117.63   Male  651   50008             Operations Manager
+## 74   74    7365 2191.77 Female  651  209658                Chief Executive
+## 75   75    7365 3949.92 Female  100   29030    Computer Support Specialist
+## 76   76    7365 3526.21   Male  100   90029              Marketing Manager
+## 77   77    7365 3677.72   Male  651   50005                           1107
+## 78   78    7365 1619.78   Male  100  155015                Systems Manager
+## 79   79    7365 1619.78 Female  100  163008              Marketing Manager
+## 80   80    7365 3915.10 Female  100   73316                Systems Analyst
+## 81   81    7365 1655.25 Female  100   76211   First-line Supervisor, admin
+## 82   82    7365 2807.57   Male  801   50009    Computer Support Specialist
+## 83   83    7365 1655.25   Male  100  160013                Systems Manager
+## 84   84    7365 2359.55   Male  651  161642                           1107
+## 85   85    7365 2334.54   Male  100 1099999                Chief Executive
+## 86   86    7365 2011.79   Male  100   60000            Electrical Engineer
+## 87   87    7365 3345.70   Male  100   98006         Engineering Technician
+## 88   88    7365 1749.75   Male  651  100003             Operations Manager
+## 89   89    7365 1579.51 Female  100  200042                Chief Executive
+## 90   90    7365 1579.51   Male  100   80042                Admin Assistant
+## 91   91    7365 1701.72   Male  651  122516                Systems Manager
+## 92   92    7365 1563.59 Female  100   91016                Systems Manager
+## 93   93    7365 1859.57 Female  651   48041                Admin Assistant
+## 94   94    7365 1879.62 Female  651   54553                Admin Assistant
+## 95   95    7365 1879.62 Female  651   54500                Admin Assistant
+## 96   96    7365 3788.49   Male  651  206300              Marketing Manager
+## 97   97    7365 1847.92 Female  651   91210             Operations Manager
+## 98   98    7365 3562.57   Male  100  100000                Engineer, other
+## 99   99    7365 3548.15   Male  100  125000              Chemical Engineer
+## 100 100    7365 3684.32   Male  100  164432             Operations Manager
+## 101 101    7365 3536.54   Male  651 1116449                Chief Executive
+## 102 102    7365 1581.90   Male  651  105042                Admin Assistant
+## 103 103    7365 2419.78   Male  100   36520             Operations Manager
+## 104 104    7365 2067.29   Male  651  161202                Chief Executive
+## 105 105    7365 1987.66   Male  651   23508   First-line Supervisor, admin
+## 106 106    7365 3562.57   Male  100  251750                Engineer, other
+## 107 107    7365 3399.42   Male  100   97169             Operations Manager
+## 108 108    7365 2214.33 Female  651  198845                Systems Manager
+## 109 109    7365 2214.33   Male  651  163297   First-line Supervisor, admin
+## 110 110    7365 3672.15 Female  100   53866                Admin Assistant
+## 111 111    7365 3767.00   Male  100   90750              Computer Operator
+## 112 112    7365 1615.22 Female  651   80020                Chief Executive
+## 113 113    7365 1886.16   Male  651   92608                Systems Manager
+## 114 114    7365 1886.16 Female  651   65000                Systems Manager
+## 115 115    7365 3725.83   Male  100   30171             Operations Manager
+## 116 116    7365 1784.99   Male  100  128300                Chief Executive
+## 117 117    7365 1764.66 Female  651  166429                Chief Executive
+## 118 118    7365 1537.14 Female  100   77000                  Admin Manager
+## 119 119    7365 1709.95 Female  100    2567                Admin Assistant
+## 120 120    7365 1987.94   Male  651   52250                     Programmer
+## 121 121    7365 1987.94   Male  651   45000                     Programmer
+## 122 122    7365 2260.88   Male  651  113005                Engineer, other
+## 123 123    7365 1668.27   Male  100  150000                     Programmer
+## 124 124    7401 1566.21 Female  100   40086                Admin Assistant
+## 125 125    7401 1730.93 Female  100   70100                Admin Assistant
+## 126 126    7401 3554.55 Female  100  195699                  Admin Manager
+## 127 127    7401 3729.57   Male  100   75000                  Admin Manager
+## 128 128    7401 1567.27   Male  100  254600         Computer Hardware Eng.
+## 129 129    7401 2027.32 Female  651  125147    Computer Support Specialist
+## 130 130    7401 1696.11   Male  100   55000         Engineering Technician
+## 131 131    7401 2488.84 Female  651   53122                Systems Analyst
+## 132 132    7401 3233.29   Male  200  128077                     Programmer
+## 133 133    7401 3595.63   Male  100  377402                Chief Executive
+## 134 134    7401 6135.27   Male  100  280000            Engineering Manager
+## 135 135    7401 3984.25 Female  100   62081                Admin Assistant
+## 136 136    7401 1771.75   Male  651  113392              Marketing Manager
+## 137 137    7401 2074.57   Male  651  120004                Engineer, other
+## 138 138    7401 3361.48 Female  100   59959   First-line Supervisor, admin
+## 139 139    7401 2385.99 Female  651  175750            Electrical Engineer
+## 140 140    7401 3246.91   Male  100  130229                Chief Executive
+## 141 141    7401 2169.17   Male  651  133139            Electrical Engineer
+## 142 142    7401 2169.17 Female  651  116024              Marketing Manager
+## 143 143    7401 2488.84   Male  651   80000                Engineer, other
+## 144 144    7401 1622.81 Female  100   12000   First-line Supervisor, admin
+## 145 145    7401 1742.98 Female  100  377720                Systems Manager
+## 146 146    7401 2129.72   Male  651  163415            Mechanical Engineer
+## 147 147    7401 2471.60   Male  651   61470                Admin Assistant
+## 148 148    7401 4003.41   Male  100  165969              Marketing Manager
+## 149 149    7401 2014.62   Male  651   65060                           1107
+## 150 150    7401 4192.13   Male  200  310004                Systems Manager
+## 151 151    7401 2676.76   Male  200   78000              Marketing Manager
+## 152 152    7401 1866.43   Male  651  146558         Computer Hardware Eng.
+## 153 153    7401 2406.08   Male  651  133297                Systems Manager
+## 154 154    7401 3303.01   Male  100  100001                Engineer, other
+## 155 155    7401 6238.74 Female  651   41288                Systems Analyst
+## 156 156    7401 1567.71 Female  100  150267                Systems Manager
+## 157 157    7401 1567.71   Male  100   92260              Network Architect
+## 158 158    7401 4104.58   Male  100   74416             Operations Manager
+## 159 159    7401 4475.43   Male  100   78361            Mechanical Engineer
+## 160 160    7401 2166.36   Male  100  202512                Engineer, other
+## 161 161    7401 2194.41   Male  651  150000                Chief Executive
+## 162 162    7401 3463.23   Male  100   97100                Chief Executive
+## 163 163    7401 1898.63 Female  803  113702                           1107
+## 164 164    7401 1898.63   Male  100  152716                  Network Admin
+## 165 165    7401 2316.89   Male  100  160000                           1107
+## 166 166    7401 3134.42   Male  651   65000                           1107
+## 167 167    7401 1656.45   Male  100   73050                Chief Executive
+## 168 168    7401 3933.88   Male  100  210201                Chief Executive
+## 169 169    7401 2508.29   Male  100    6803              Chemical Engineer
+## 170 170    7401 1857.63 Female  100   10315                Admin Assistant
+## 171 171    7401 1597.99 Female  100   87073                Systems Manager
+## 172 172    7401 1876.27   Male  100  117480             Aerospace Engineer
+## 173 173    7401 1680.06 Female  100  181150              Marketing Manager
+## 174 174    7401 1977.89   Male  651   93208                Chief Executive
+## 175 175    7401 2139.64   Male  100  100121                     Programmer
+## 176 176    7401 1947.33   Male  651   99234                Engineer, other
+## 177 177    7401 2036.12 Female  651  131617              Marketing Manager
+## 178 178    7401 2007.27 Female  651   76342                Systems Analyst
+## 179 179    7401 2007.27   Male  651  351200                 Civil Engineer
+## 180 180    7401 2275.39   Male  651  120683                Engineer, other
+## 181 181    7401 2275.39 Female  651  183683                Engineer, other
+## 182 182    7401 2011.36   Male  651  111380              Marketing Manager
+## 183 183    7401 1891.06   Male  651  110166         Computer Hardware Eng.
+## 184 184    7401 1915.97   Male  651   75005    Computer Support Specialist
+## 185 185    7401 2145.29   Male  651  250341        Market Research Analyst
+## 186 186    7401 2272.87   Male  100   75800            Mechanical Engineer
+## 187 187    7401 2375.71 Female  651   99095        Market Research Analyst
+## 188 188    7401 1890.54   Male  651  200082                Engineer, other
+## 189 189    7401 2487.95   Male  651  170002         Engineering Technician
+## 190 190    7401 1630.29   Male  651  242800            Engineering Manager
+## 191 191    7401 1930.24   Male  100  196000              Marketing Manager
+## 192 192    7401 1498.90   Male  100 1026510                Chief Executive
+## 193 193    7401 2446.39   Male  651   85000    Computer Support Specialist
+## 194 194    7401 1967.07 Female  651   41600    Computer Support Specialist
+## 195 195    7401 1896.03   Male  651  144001                Engineer, other
+## 196 196    7401 1887.32 Female  651   11021                Admin Assistant
+## 197 197    7401 1745.31   Male  651   71480                Engineer, other
+## 198 198    7401 1770.32   Male  651   92746                Engineer, other
+## 199 199    7401 1906.13   Male  651  155702              Network Architect
+## 200 200    7401 1900.56 Female  651   60932                Engineer, other
+## 201 201    7401 2246.43   Male  651   55144    Computer Support Specialist</code></pre>
+</section>
+<section id="codebooksdata-dictionariesreadmesetc.-are-your-friend-1" class="slide level2">
+<h2>Codebooks/Data Dictionaries/ReadMes,etc. are your Friend</h2>
+<p><a href="https://cps.ipums.org/cps/" class="uri">https://cps.ipums.org/cps/</a></p>
+</section>
 <section id="missing-data" class="slide level2">
 <h2>Missing Data</h2>
 <p><img src="nulls.png" /></p>

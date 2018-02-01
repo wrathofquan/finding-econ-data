@@ -182,6 +182,47 @@ Each observation forms a row
 | April 20, 2017             | 2017-04-20         | Use common ISO year format |
 
 
+
+
+
+## 
+
+"","METAREA","WTSUPP","SEX","RACE","INCTOT","OCC"
+"1",7365,2300.9,"Male",651,123500,"Systems Manager"
+"2",7365,2021.71,"Female",803,60230,"Admin Assistant"
+"3",7365,1574.42,"Male",100,95610,"Programmer"
+"4",7365,1754.13,"Female",100,75000,"Admin Assistant"
+"5",7365,3239.38,"Male",100,50008,"First-line Supervisor, admin"
+"6",7365,2044.9,"Female",651,78001,"Computer Support Specialist"
+"7",7365,2683.43,"Male",802,101700,"Mechanical Engineer"
+"8",7365,4246.01,"Female",651,74101,"Systems Manager"
+"9",7365,2018.73,"Male",100,28501,"Chief Executive"
+"10",7365,5693.22,"Male",200,74718,"Admin Assistant"
+"11",7365,3940.96,"Male",100,93001,"Engineer, other"
+"12",7365,2029.34,"Male",651,150032,"Systems Manager"
+"13",7365,2263.92,"Male",651,120150,"Electrical Engineer"
+"14",7365,3379.88,"Male",100,90,"Marketing Manager"
+"15",7365,2091.59,"Female",300,72108,"Admin Assistant"
+"16",7365,2018.73,"Male",100,280002,"Chief Executive"
+"17",7365,2188.57,"Male",651,114843,"Chief Executive"
+"18",7365,3250.69,"Female",100,80050,"Admin Assistant"
+"19",7365,1894.1,"Male",651,120060,"Operations Manager"
+
+## Codebooks/Data Dictionaries/ReadMes,etc. are your Friend
+
+```{r echo=TRUE}
+read.csv("cps.csv")
+```
+
+
+
+
+## Codebooks/Data Dictionaries/ReadMes,etc. are your Friend
+
+https://cps.ipums.org/cps/
+
+
+
 ## Missing Data
 ![](nulls.png)
 
