@@ -3,7 +3,7 @@ title:
 output:
   revealjs::revealjs_presentation:
     self_contained: false
-    reveal_plugins: ["chalkboard", "search"]
+    reveal_plugins: ["chalkboard"]
     theme: serif
     transition: fade
     highlight: zenburn
