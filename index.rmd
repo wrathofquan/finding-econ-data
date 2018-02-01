@@ -82,9 +82,10 @@ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots \beta_p X_p + \epsilon
 <br>
 
 
-Hours_Sleep =  Hours_School + Hours_Work + ¯\_(ツ)_/¯
 
-
+\begin{equation}
+Salary = \beta_0 + \beta_1 Gender + \beta_2 Race + \ldots \beta_p X_p + \epsilon
+\end{equation}
 
 
 
@@ -148,40 +149,37 @@ Each observation forms a row
 
 ##Tidy Data = Happy Data
 
-![melt.png]
+![](melt.png)
 
 
 ## Variable Naming
 
-| Good_Variable_Name     | Bad_Variable_Name           | Description |
-|------------------|-----------------------|-------------|
-| gnp2010          | gnp-2002; gnp#2002    |             |
-| real_int         | real interest rate    |             |
-| score1; gnp2003  | 1st_score; 2003gnp    |             |
-| reg_out; glm1    | REG; glm; ttest       |             |
-| invest; interest | xxx; yyy; zmdje;      |             |
-| male; asian      | gender; race          |             |
-| citizen          | Are_you_a_US_citizen? |             |
-| income; intUS03  | INCOME; Int_us2003;   |             |
-| 2017-04-20       | April 20, 2017        |             |
-
+| Bad_Variable_Name          | Good_Variable_Name | Description |
+|----------------------------|--------------------|-------------|
+| gnp-2002; gnp#2002         |                    |             |
+| real interest rate         |                    |             |
+| 1st_score; 2003gnp         |                    |             |
+| REG; glm; ttest            |                    |             |
+| xxx; yyy; zmdje;           |                    |             |
+| gender; race               |                    |             |
+| Whats_Your_Favorite_Color? |                    |             |
+| INCOME; Int_us2003;        |                    |             |
+| April 20, 2017             |                    |             |
 
 
 ## Variable Naming
 
-
-| Good_Variable_Name     | Bad_Variable_Name               | Description                |
-|------------------|----------------------------|----------------------------|
-| gnp2010          | gnp-2002; gnp#2002         | avoid special characters   |
-| real_int         | real interest rate         | Use underscore             |
-| score1; gnp2003  | 1st_score; 2003gnp         | Begin with a character     |
-| reg_out; glm1    | REG; glm; ttest            | Avoid reserved words       |
-| invest; interest | xxx; yyy; zmdje;           | Use meaningful names       |
-| male; asian      | gender; race               | Use a value of dummy       |
-| fav_color        | Whats_Your_Favorite_Color? | The shorter, the better    |
-| income; intUS03  | INCOME; Int_us2003;        | Use lower cases            |
-| 2017-04-20       | April 20, 2017             | Use common ISO year format |
-
+| Bad_Variable_Name          | Good_Variable_Name | Description                |
+|----------------------------|--------------------|----------------------------|
+| gnp-2002; gnp#2002         | gnp2010            | avoid special characters   |
+| real interest rate         | real_int           | Use underscore             |
+| 1st_score; 2003gnp         | score1; gnp2003    | Begin with a character     |
+| REG; glm; ttest            | reg_out; glm1      | Avoid reserved words       |
+| xxx; yyy; zmdje;           | invest; interest   | Use meaningful names       |
+| gender; race               | male; asian        | Use a value of dummy       |
+| Whats_Your_Favorite_Color? | fav_color          | The shorter, the better    |
+| INCOME; Int_us2003;        | income; intUS03    | Use lower cases            |
+| April 20, 2017             | 2017-04-20         | Use common ISO year format |
 
 
 ## Missing Data

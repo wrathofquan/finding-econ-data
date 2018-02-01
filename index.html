@@ -524,7 +524,9 @@ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots \beta_p X_p + \epsilon
 Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots \beta_p X_p + \epsilon
 \end{equation}\]</span>
 <p><br></p>
-<p>Hours_Sleep = Hours_School + Hours_Work + ¯_(ツ)_/¯</p>
+<span class="math display">\[\begin{equation}
+Salary = \beta_0 + \beta_1 Gender + \beta_2 Race + \ldots \beta_p X_p + \epsilon
+\end{equation}\]</span>
 </section>
 <section id="structure-and-availability-of-data" class="slide level2">
 <h2>Structure and availability of data</h2>
@@ -607,62 +609,62 @@ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots \beta_p X_p + \epsilon
 </section>
 <section id="tidy-data-happy-data-1" class="slide level2">
 <h2>Tidy Data = Happy Data</h2>
-<p>[melt.png]</p>
+<p><img src="melt.png" /></p>
 </section>
 <section id="variable-naming" class="slide level2">
 <h2>Variable Naming</h2>
 <table>
 <thead>
 <tr class="header">
-<th>Good_Variable_Name</th>
 <th>Bad_Variable_Name</th>
+<th>Good_Variable_Name</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>gnp2010</td>
 <td>gnp-2002; gnp#2002</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>real_int</td>
 <td>real interest rate</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>score1; gnp2003</td>
 <td>1st_score; 2003gnp</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>reg_out; glm1</td>
 <td>REG; glm; ttest</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>invest; interest</td>
 <td>xxx; yyy; zmdje;</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>male; asian</td>
 <td>gender; race</td>
 <td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>citizen</td>
-<td>Are_you_a_US_citizen?</td>
+<td>Whats_Your_Favorite_Color?</td>
+<td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>income; intUS03</td>
 <td>INCOME; Int_us2003;</td>
+<td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>2017-04-20</td>
 <td>April 20, 2017</td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
@@ -673,55 +675,55 @@ Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots \beta_p X_p + \epsilon
 <table>
 <thead>
 <tr class="header">
-<th>Good_Variable_Name</th>
 <th>Bad_Variable_Name</th>
+<th>Good_Variable_Name</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>gnp2010</td>
 <td>gnp-2002; gnp#2002</td>
+<td>gnp2010</td>
 <td>avoid special characters</td>
 </tr>
 <tr class="even">
-<td>real_int</td>
 <td>real interest rate</td>
+<td>real_int</td>
 <td>Use underscore</td>
 </tr>
 <tr class="odd">
-<td>score1; gnp2003</td>
 <td>1st_score; 2003gnp</td>
+<td>score1; gnp2003</td>
 <td>Begin with a character</td>
 </tr>
 <tr class="even">
-<td>reg_out; glm1</td>
 <td>REG; glm; ttest</td>
+<td>reg_out; glm1</td>
 <td>Avoid reserved words</td>
 </tr>
 <tr class="odd">
-<td>invest; interest</td>
 <td>xxx; yyy; zmdje;</td>
+<td>invest; interest</td>
 <td>Use meaningful names</td>
 </tr>
 <tr class="even">
-<td>male; asian</td>
 <td>gender; race</td>
+<td>male; asian</td>
 <td>Use a value of dummy</td>
 </tr>
 <tr class="odd">
-<td>fav_color</td>
 <td>Whats_Your_Favorite_Color?</td>
+<td>fav_color</td>
 <td>The shorter, the better</td>
 </tr>
 <tr class="even">
-<td>income; intUS03</td>
 <td>INCOME; Int_us2003;</td>
+<td>income; intUS03</td>
 <td>Use lower cases</td>
 </tr>
 <tr class="odd">
-<td>2017-04-20</td>
 <td>April 20, 2017</td>
+<td>2017-04-20</td>
 <td>Use common ISO year format</td>
 </tr>
 </tbody>
