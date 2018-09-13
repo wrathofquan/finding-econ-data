@@ -219,10 +219,10 @@ read.csv("cps.csv")
 
 ## Codebooks/Data Dictionaries/ReadMes,etc. are your Friend
 
- example of a codebook:
+codebook:
 https://cps.ipums.org/cps/
 
-An example of a really nicely thought-out read-me file: 
+read-me file: 
 https://github.com/the-pudding/data/tree/master/pockets
 
 
@@ -347,6 +347,17 @@ https://data.berkeley.edu/education/datapeers
 ## Reaching out
 
 http://www.lib.berkeley.edu/libraries/data-lab
+
+
+## Rest of class
+
+1. Think about your topic or topics and find out what JEL Classification it maps to. 
+
+2. Using a library database like EconLit or a database of your choice, identify at least one article that you might use
+
+3. Using one a data resource like Data Planet or ICPSR, identify a dataset or data source that you might se
+
+4. Check-in with any questions :)
 
 
 
