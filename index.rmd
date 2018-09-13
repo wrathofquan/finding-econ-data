@@ -140,7 +140,7 @@ Each variable forms a column and contains values
 
 Each observation forms a row
 
-![](tidy.png)
+![](images/tidy.png)
 
 
 
@@ -149,7 +149,7 @@ Each observation forms a row
 
 ##Tidy Data = Happy Data
 
-![](melt.png)
+![](images/melt.png)
 
 
 ## Variable Naming
@@ -224,7 +224,7 @@ https://cps.ipums.org/cps/
 
 
 ## Missing Data
-![](nulls.png)
+![](images/nulls.png)
 
 
 
@@ -249,6 +249,19 @@ Data.gov
 [American Economics Association ](https://www.aeaweb.org/rfe/showCat.php?cat_id=9)
 
 
+## Do-it-yourself
+
+
+![](images/hammer.gif)
+
+## Text-mining
+
+![](images/textmining_flowchart.png){width=70% }
+
+
+## Text-mining
+
+http://guides.lib.berkeley.edu/text-mining
 
 ## APIs
 
@@ -295,16 +308,9 @@ https://vincentarelbundock.github.io/Rdatasets/datasets.html
 
 https://github.com/caesar0301/awesome-public-datasets
 
+https://toolbox.google.com/datasetsearch
 
 
-## Text-mining
-
-![](textmining_flowchart.png){width=70% }
-
-
-## Text-mining
-
-http://guides.lib.berkeley.edu/text-mining
 
 
 
@@ -321,13 +327,13 @@ http://guides.lib.berkeley.edu/text-mining
 
 
 
-## Peer Advising at Moffitt
+## Data Peer Advising at Moffitt!
 
 <center>
 
-![](flyer.PNG){width=45% }
+![](images/map.pdf){width=45% }
 
-https://data.berkeley.edu/education/data-peers-consulting
+https://data.berkeley.edu/education/datapeers
 
 
 </center>

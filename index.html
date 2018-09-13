@@ -490,7 +490,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section id="finding-data-for-economics-research" class="slide level2">
 <h2>Finding Data for Economics Research</h2>
 <p>UC Berkeley Library</p>
-<p>February 2018</p>
+<p>September 2018</p>
 </section>
 <section class="slide level2">
 
@@ -605,11 +605,11 @@ Salary = \beta_0 + \beta_1 Gender + \beta_2 Race + \ldots \beta_p X_p + \epsilon
 <p>Tidy Data has the following attributes:</p>
 <p>Each variable forms a column and contains values</p>
 <p>Each observation forms a row</p>
-<p><img src="tidy.png" /></p>
+<p><img src="images/tidy.png" /></p>
 </section>
 <section id="tidy-data-happy-data-1" class="slide level2">
 <h2>Tidy Data = Happy Data</h2>
-<p><img src="melt.png" /></p>
+<p><img src="images/melt.png" /></p>
 </section>
 <section id="variable-naming" class="slide level2">
 <h2>Variable Naming</h2>
@@ -945,7 +945,7 @@ Salary = \beta_0 + \beta_1 Gender + \beta_2 Race + \ldots \beta_p X_p + \epsilon
 </section>
 <section id="missing-data" class="slide level2">
 <h2>Missing Data</h2>
-<p><img src="nulls.png" /></p>
+<p><img src="images/nulls.png" /></p>
 </section>
 <section id="library-licensed-data-aggregators" class="slide level2">
 <h2>Library Licensed Data Aggregators</h2>
@@ -958,6 +958,18 @@ Salary = \beta_0 + \beta_1 Gender + \beta_2 Race + \ldots \beta_p X_p + \epsilon
 <p>ICPSR</p>
 <p>Data.gov</p>
 <p><a href="https://www.aeaweb.org/rfe/showCat.php?cat_id=9">American Economics Association</a></p>
+</section>
+<section id="do-it-yourself" class="slide level2">
+<h2>Do-it-yourself</h2>
+<p><img src="images/hammer.gif" /></p>
+</section>
+<section id="text-mining" class="slide level2">
+<h2>Text-mining</h2>
+<p><img src="images/textmining_flowchart.png" style="width:70.0%" /></p>
+</section>
+<section id="text-mining-1" class="slide level2">
+<h2>Text-mining</h2>
+<p><a href="http://guides.lib.berkeley.edu/text-mining" class="uri">http://guides.lib.berkeley.edu/text-mining</a></p>
 </section>
 <section id="apis" class="slide level2">
 <h2>APIs</h2>
@@ -984,25 +996,18 @@ ufo_name &lt;-<span class="st"> </span><span class="kw">html_nodes</span>(ufo,<s
 ufo_df&lt;-<span class="kw">data.frame</span>(<span class="dt">date =</span> ufo_date, <span class="dt">name =</span> ufo_name, <span class="dt">state =</span> ufo_state)
 
 <span class="kw">head</span>(ufo_df, <span class="dt">n =</span><span class="dv">5</span>)</code></pre></div>
-<pre><code>##                date                        name      state
-## 1        April 1941    Cape Girardeau UFO crash   Missouri
-## 2 February 24, 1942       Battle of Los Angeles California
-## 3     June 21, 1947       Maury Island incident Washington
-## 4     June 24, 1947 Kenneth Arnold UFO sighting Washington
-## 5      July 7, 1947                                Montana</code></pre>
+<pre><code>##                  date                          name        state
+## 1 February 24, 1942\n       Battle of Los Angeles\n California\n
+## 2     June 21, 1947\n       Maury Island incident\n Washington\n
+## 3     June 24, 1947\n Kenneth Arnold UFO sighting\n Washington\n
+## 4      July 7, 1947\n                            \n    Montana\n
+## 5        July 1947 \n        Roswell UFO incident\n New Mexico\n</code></pre>
 </section>
 <section id="miscellaneous-collections" class="slide level2">
 <h2>Miscellaneous Collections</h2>
 <p><a href="https://vincentarelbundock.github.io/Rdatasets/datasets.html" class="uri">https://vincentarelbundock.github.io/Rdatasets/datasets.html</a></p>
 <p><a href="https://github.com/caesar0301/awesome-public-datasets" class="uri">https://github.com/caesar0301/awesome-public-datasets</a></p>
-</section>
-<section id="text-mining" class="slide level2">
-<h2>Text-mining</h2>
-<p><img src="textmining_flowchart.png" style="width:70.0%" /></p>
-</section>
-<section id="text-mining-1" class="slide level2">
-<h2>Text-mining</h2>
-<p><a href="http://guides.lib.berkeley.edu/text-mining" class="uri">http://guides.lib.berkeley.edu/text-mining</a></p>
+<p><a href="https://toolbox.google.com/datasetsearch" class="uri">https://toolbox.google.com/datasetsearch</a></p>
 </section>
 <section id="d-lab-library-data-lab-statistics-department-student-learning-center" class="slide level2">
 <h2>D-Lab, Library Data Lab, Statistics Department, Student Learning Center</h2>
@@ -1013,11 +1018,11 @@ ufo_df&lt;-<span class="kw">data.frame</span>(<span class="dt">date =</span> ufo
 <li><a href="http://slc.berkeley.edu/econ" class="uri">http://slc.berkeley.edu/econ</a></li>
 </ul>
 </section>
-<section id="peer-advising-at-moffitt" class="slide level2">
-<h2>Peer Advising at Moffitt</h2>
+<section id="data-peer-advising-at-moffitt" class="slide level2">
+<h2>Data Peer Advising at Moffitt!</h2>
 <center>
-<p><img src="flyer.png" style="width:45.0%" /></p>
-<p><a href="https://data.berkeley.edu/education/data-peers-consulting" class="uri">https://data.berkeley.edu/education/data-peers-consulting</a></p>
+<p><embed src="images/mao.pdf" style="width:45.0%" /></p>
+<p><a href="https://data.berkeley.edu/education/datapeers" class="uri">https://data.berkeley.edu/education/datapeers</a></p>
 </center>
 </section>
 <section id="reaching-out" class="slide level2">
