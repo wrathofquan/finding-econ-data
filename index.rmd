@@ -334,11 +334,12 @@ https://toolbox.google.com/datasetsearch
 
 ## Data Peer Advising at Moffitt!
 
+https://data.berkeley.edu/education/datapeers
+
 <center>
 
 ![](images/map.png)
 
-https://data.berkeley.edu/education/datapeers
 
 
 </center>
