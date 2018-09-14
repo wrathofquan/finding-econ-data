@@ -351,6 +351,32 @@ https://data.berkeley.edu/education/datapeers
 http://www.lib.berkeley.edu/libraries/data-lab
 
 
+---------------------
+
+
+### Summary of Resources
+
+
+[Berkeley Library Catalog](http://www.lib.berkeley.edu/)
+  
+[Google Scholar](http://scholar.google.com)
+
+[Library Guides](http://guides.lib.berkeley.edu/all-guides)
+
+[Data Planet](https://libproxy.berkeley.edu/login?qurl=http%3A%2F%2Fstatisticaldatasets.data-planet.com%2Fdataplanet%2F)
+
+[Social Explorer](https://libproxy.berkeley.edu/login?qurl=http%3A%2F%2Fuclibs.org%2FPID%2F163645)
+
+[Dataverse](https://dataverse.harvard.edu/)
+  
+[ICPSR](https://www.icpsr.umich.edu/icpsrweb/)
+
+[American Economics Association ](https://www.aeaweb.org/rfe/showCat.php?cat_id=9)
+
+
+
+
+
 ## Rest of class
 
 1. Think about your topic or topics and find out what JEL Classification it maps to. 
